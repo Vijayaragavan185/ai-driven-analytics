@@ -8,6 +8,18 @@ from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error
 import joblib
 import matplotlib.pyplot as plt
 import seaborn as sns
+import os
+
+# Get the base directory of the project
+def get_project_root():
+    script_path = os.path.abspath(__file__)  # Get the absolute path of the current file
+    modeling_dir = os.path.dirname(script_path)  # Get the directory of the file
+    src_dir = os.path.dirname(modeling_dir)  # Go up to src
+    project_root = os.path.dirname(src_dir)  # Go up to project root
+    return project_root
+
+
+
 
 def prepare_features_and_target(df, target_col, feature_cols=None, test_size=0.2, random_state=42):
     """
@@ -204,7 +216,12 @@ def predict_with_model(model, X):
 
 if __name__ == "__main__":
     # Example usage
-    df = pd.read_csv("../data/processed/processed_business_data.csv")
+    # Then use this to build absolute paths
+    project_root = get_project_root()
+    data_file = os.path.join(project_root, "data", "processed", "processed_business_data.csv")
+
+    # Use the absolute path
+    df = pd.read_csv(data_file)
     
     # Prepare features and target (predict sales)
     X_train, X_test, y_train, y_test, features = prepare_features_and_target(
