@@ -159,25 +159,11 @@ def plot_model_comparison(evaluation_df, metric='Test R²', ascending=False):
 def save_best_model(models, evaluation_df, metric='Test R²', ascending=False, save_path=None):
     """
     Save the best model based on a selected metric.
-    
-    Parameters:
-    -----------
-    models : dict
-        Dictionary of trained models
-    evaluation_df : pandas.DataFrame
-        DataFrame with model evaluation metrics
-    metric : str, optional
-        Metric to use for selecting best model
-    ascending : bool, optional
-        Whether lower values of metric are better
-    save_path : str, optional
-        Path to save the model
-        
-    Returns:
-    --------
-    tuple
-        (best_model_name, best_model)
     """
+    # Import required modules
+    import joblib
+    import os
+    
     # Find best model name based on metric
     if ascending:
         best_model_name = evaluation_df.loc[evaluation_df[metric].idxmin(), 'Model']
@@ -189,10 +175,14 @@ def save_best_model(models, evaluation_df, metric='Test R²', ascending=False, s
     
     # Save the model if path provided
     if save_path:
+        # Create directory if needed
+        os.makedirs(os.path.dirname(save_path), exist_ok=True)
+        
         joblib.dump(best_model, save_path)
         print(f"Best model ({best_model_name}) saved to {save_path}")
     
     return best_model_name, best_model
+
 
 def predict_with_model(model, X):
     """
