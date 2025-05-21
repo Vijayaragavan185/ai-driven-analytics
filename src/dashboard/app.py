@@ -24,7 +24,7 @@ def create_dashboard():
 def run_dashboard(debug=True, port=8050):
     """Run the dashboard application"""
     app = create_dashboard()
-    app.run_server(debug=debug, port=port)
+    app.run(debug=debug, port=port)
     
 if __name__ == "__main__":
     run_dashboard()
