@@ -24,3 +24,17 @@ This project implements an AI-driven data analytics system that automatically ge
 1. Work in feature branches
 2. Run tests before committing
 3. Use pull requests for code review
+
+## Interactive Dashboard
+
+The project includes an interactive web dashboard for exploring business analytics.
+
+To run the dashboard:
+open http://127.0.0.1:8050 in your browser.
+
+Features:
+- Visualize business metrics over time
+- Filter data by date ranges
+- Explore correlations between metrics
+- View model predictions and feature importance
+- Monitor key performance indicators
