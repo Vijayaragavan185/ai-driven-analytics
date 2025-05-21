@@ -41,6 +41,7 @@ ai-driven-analytics/
 ├── tests/                 # Unit tests
 ├── requirements.txt       # Project dependencies
 └── README.md              # Project documentation
+```
 
 
 
