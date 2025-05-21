@@ -23,7 +23,25 @@ This project implements an advanced, AI-driven data analytics system that automa
 
 ## Project Structure
 
-<pre> ```text ai-driven-analytics/ ├── data/ # Data storage │ ├── raw/ # Raw input data │ ├── processed/ # Cleaned and processed data │ └── visualizations/ # Generated plots and charts ├── models/ # Saved machine learning models ├── notebooks/ # Jupyter notebooks for exploration and analysis ├── reports/ # Generated insight reports ├── src/ # Source code │ ├── dashboard/ # Interactive dashboard components │ ├── data_processing/ # Data cleaning and transformation │ ├── insights/ # Automated insight generation │ ├── modeling/ # Machine learning models │ └── visualization/ # Data visualization ├── tests/ # Unit tests ├── requirements.txt # Project dependencies └── README.md # Project documentation ``` </pre>
+```text
+ai-driven-analytics/
+├── data/                   # Data storage
+│   ├── raw/               # Raw input data
+│   ├── processed/         # Cleaned and processed data
+│   └── visualizations/    # Generated plots and charts
+├── models/                # Saved machine learning models
+├── notebooks/             # Jupyter notebooks for exploration and analysis
+├── reports/               # Generated insight reports
+├── src/                   # Source code
+│   ├── dashboard/         # Interactive dashboard components
+│   ├── data_processing/   # Data cleaning and transformation
+│   ├── insights/          # Automated insight generation
+│   ├── modeling/          # Machine learning models
+│   └── visualization/     # Data visualization
+├── tests/                 # Unit tests
+├── requirements.txt       # Project dependencies
+└── README.md              # Project documentation
+
 
 
 
